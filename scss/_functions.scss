@@ -1,0 +1,12 @@
+@function weight($weight-name){
+  @return map-get($font-weights, $weight-name)
+};
+@function size($size-name){
+  @return map-get($font-sizes, $size-name)
+};
+@function color($color-name){
+  @return map-get($colors, $color-name)
+};
+@function text-height($height-name){
+  @return map-get($line-heights, $height-name)
+}

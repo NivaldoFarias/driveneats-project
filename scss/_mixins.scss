@@ -1,0 +1,16 @@
+@mixin flexColumn(){
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@mixin flexArticles(){
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  width: max-content;
+  height: auto;
+
+  overflow-x: scroll;
+}

@@ -34,6 +34,8 @@ header {
   background-color: #cf2b2b;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 header .header__logo {
@@ -50,44 +52,143 @@ header .header__subtext {
 }
 
 main {
-  position: relative;
   width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 514px;
+      grid-template-columns: 514px;
+  -ms-grid-rows: 216px 216px 216px;
+      grid-template-rows: 216px 216px 216px;
+  grid-auto-columns: 1fr;
+  gap: 69px 0px;
+  grid-auto-flow: row;
+      grid-template-areas: "food-options" "drink-options" "dessert-options";
+  position: relative;
+  width: 100vw;
   top: 92px;
   padding-left: 21px;
   padding-top: 25px;
 }
 
-main .main__sectiontitle {
-  position: -webkit-sticky;
-  position: sticky;
+main .main__titles {
+  position: absolute;
   font-family: 'Righteous', cursive;
   font-size: 26px;
   color: #333333;
 }
 
+main > div {
+  background: #dd0505;
+  -webkit-box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+
 article {
-  width: 172px;
-  height: 216px;
+  width: auto;
+  height: 100%;
   background: white;
   -webkit-box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
   border-radius: 9px;
 }
 
-.articles-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: auto;
-  overflow-x: scroll;
+.food-options {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: food-options;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 0px 16px;
+  grid-auto-flow: row;
+      grid-template-areas: "food-option-1 food-option-2 food-option-3";
+}
+
+.food-options .food-option-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: food-option-1;
+}
+
+.food-options .food-option-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: food-option-2;
+}
+
+.food-options .food-option-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: food-option-3;
+}
+
+.drink-options {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: drink-options;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 0px 16px;
+  grid-auto-flow: row;
+      grid-template-areas: "drink-option-1 drink-option-2 drink-option-3";
+}
+
+.drink-options .drink-option-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: drink-option-1;
+}
+
+.drink-options .drink-option-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: drink-option-2;
+}
+
+.drink-options .drink-option-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: drink-option-3;
+}
+
+.dessert-options {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: dessert-options;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 0px 16px;
+  grid-auto-flow: row;
+      grid-template-areas: "dessert-option-1 dessert-option-2 dessert-option-3";
+}
+
+.dessert-options .dessert-option-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: dessert-option-1;
+}
+
+.dessert-options .dessert-option-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: dessert-option-2;
+}
+
+.dessert-options .dessert-option-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: dessert-option-3;
 }

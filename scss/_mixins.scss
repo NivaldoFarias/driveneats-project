@@ -4,13 +4,18 @@
   align-items: flex-start;
   flex-direction: column;
 }
-@mixin flexArticles(){
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-
-  width: max-content;
-  height: auto;
-
-  overflow-x: scroll;
+@mixin gridTemplate(){
+  width: 100%; 
+  height: auto; 
+   
+  display: grid;
+  grid-template-columns: 514px;
+  grid-template-rows: 216px 216px 216px;
+  grid-auto-columns: 1fr;
+  gap: 69px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "food-options"
+    "drink-options"
+    "dessert-options";
 }

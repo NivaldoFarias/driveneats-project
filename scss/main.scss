@@ -20,6 +20,8 @@ header {
 
   background-color: color("red");
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 
   .#{&}__logo {  
     font-family: 'Righteous', cursive;
@@ -34,27 +36,93 @@ header {
   }
 }
 main {
+  @include gridTemplate();
   position: relative;
-  width: 100%;
+  width: 100vw;
   top: 92px;
   padding-left: 21px;
   padding-top: 25px;
 
-  .#{&}__sectiontitle {
-    position: sticky;
+  .#{&}__titles {
+    position: absolute;
     font-family: 'Righteous', cursive;
-    font-size: size("main-title");
+    font-size: size("section-title");
     color: color("default");
+  }
+  > div {
+    background: #dd0505;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
   }
 }
 article {
-  width: 172px;
-  height: 216px;
+  width: auto;
+  height: 100%;
 
   background: color("white");
   box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
   border-radius: 9px;
 }
-.articles-container {
-  @include flexArticles();
+.food-options {  
+  grid-area: food-options;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 16px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "food-option-1 food-option-2 food-option-3";
+  
+  .food-option-1 { 
+    grid-area: food-option-1; 
+  }
+  .food-option-2 {
+    grid-area: food-option-2; 
+  }
+  .food-option-3 { 
+    grid-area: food-option-3;
+  }
 }
+.drink-options {  
+  grid-area: drink-options;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 16px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "drink-option-1 drink-option-2 drink-option-3";
+  .drink-option-1 { 
+    grid-area: drink-option-1; 
+  }
+  .drink-option-2 { 
+    grid-area: drink-option-2;
+  }
+  .drink-option-3 {
+    grid-area: drink-option-3;
+  }
+}
+.dessert-options {  
+  grid-area: dessert-options;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 16px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "dessert-option-1 dessert-option-2 dessert-option-3";
+  .dessert-option-1 { 
+    grid-area: dessert-option-1;
+  }
+  .dessert-option-2 { 
+    grid-area: dessert-option-2; 
+  }
+  .dessert-option-3 {
+    grid-area: dessert-option-3; 
+  }
+}
+
+

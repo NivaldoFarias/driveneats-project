@@ -6,17 +6,19 @@ $colors: (
   "background": rgba(229, 229, 229,1 ),
   "green": rgba(50, 183, 47, 1),
   "red": rgba(207, 43, 43, 1),
-  "white": rgba(255, 255, 255, 1)
+  "pink": rgb(250, 64, 152),
+  "pink-light": rgb(255, 131, 189)
 );
 $font-weights: (
+  "light": 300,
   "regular": 400,
   "medium": 500,
   "bold": 700
 );
 $font-sizes: (
-  "small": 15px,
-  "medium": 16px,
-  "big": 20px,
+  "item-description": 15px,
+  "default": 16px,
+  "buttom-text": 20px,
   "header-footer": 18px,
   "main-title": 26px,
   "header-logo": 44px

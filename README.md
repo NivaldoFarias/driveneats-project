@@ -21,7 +21,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/NivaldoFarias/Projeto-Layout-Instagram">
+  <a href="https://github.com/NivaldoFarias/projeto3-driveneats">
     <img src="https://www.driven.com.br/wp-content/uploads/2021/11/logo-footer.svg" alt="Logo" width="150" height="80">
   </a>
 

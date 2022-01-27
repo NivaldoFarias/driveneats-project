@@ -60,6 +60,7 @@ main {
   width: 100%;
   top: 92px;
   padding-top: 30px;
+  margin-bottom: 180px;
 }
 
 article {
@@ -168,4 +169,9 @@ footer {
   border-radius: 50px;
   text-align: center;
   background-color: #ff83bd;
+}
+
+.selected {
+  -webkit-box-shadow: 0px 0px 0px 5px #32b72f inset;
+          box-shadow: 0px 0px 0px 5px #32b72f inset;
 }

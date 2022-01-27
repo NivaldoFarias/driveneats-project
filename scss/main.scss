@@ -43,6 +43,7 @@ main {
   width: 100%;
   top: 92px;
   padding-top: 30px;
+  margin-bottom: 180px;
 }
 article {
   @include flexColumn();
@@ -57,6 +58,7 @@ article {
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
   border-radius: 9px;
+
   :nth-child(2) {
     font-size: size("default");
     font-weight: weight("bold");
@@ -122,4 +124,7 @@ footer {
   text-align: center;
 
   background-color: color("pink-light");
+}
+.selected {
+  box-shadow: 0px 0px 0px 5px rgba(50, 183, 47, 1) inset;
 }

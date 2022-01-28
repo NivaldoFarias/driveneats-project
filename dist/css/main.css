@@ -171,7 +171,17 @@ footer {
   background-color: #ff83bd;
 }
 
-.selected {
+.selected-food {
+  -webkit-box-shadow: 0px 0px 0px 5px #32b72f inset;
+          box-shadow: 0px 0px 0px 5px #32b72f inset;
+}
+
+.selected-drink {
+  -webkit-box-shadow: 0px 0px 0px 5px #32b72f inset;
+          box-shadow: 0px 0px 0px 5px #32b72f inset;
+}
+
+.selected-dessert {
   -webkit-box-shadow: 0px 0px 0px 5px #32b72f inset;
           box-shadow: 0px 0px 0px 5px #32b72f inset;
 }

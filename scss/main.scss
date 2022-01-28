@@ -114,7 +114,7 @@ footer {
 }
 .disabled {
   opacity: 0.6;
-  cursor: not-allowed;
+  cursor: not-allowed;;
 }
 .button {
   width: 80%;
@@ -122,9 +122,16 @@ footer {
   border-radius: 50px;
 
   text-align: center;
+  
 
   background-color: color("pink-light");
 }
-.selected {
+.selected-food {
+  box-shadow: 0px 0px 0px 5px rgba(50, 183, 47, 1) inset;
+}
+.selected-drink {
+  box-shadow: 0px 0px 0px 5px rgba(50, 183, 47, 1) inset;
+}
+.selected-dessert {
   box-shadow: 0px 0px 0px 5px rgba(50, 183, 47, 1) inset;
 }

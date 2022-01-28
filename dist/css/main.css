@@ -126,6 +126,14 @@ footer {
   background-color: rgba(255, 255, 255, 0.925);
 }
 
+footer button {
+  width: 80%;
+  height: 50%;
+  border-radius: 50px;
+  text-align: center;
+  background-color: #ff83bd;
+}
+
 .options-container {
   position: relative;
   width: 100vw;
@@ -158,19 +166,6 @@ footer {
   height: 100%;
 }
 
-.disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.button {
-  width: 80%;
-  height: 50%;
-  border-radius: 50px;
-  text-align: center;
-  background-color: #ff83bd;
-}
-
 .selected-food {
   -webkit-box-shadow: 0px 0px 0px 5px #32b72f inset;
           box-shadow: 0px 0px 0px 5px #32b72f inset;
@@ -184,4 +179,34 @@ footer {
 .selected-dessert {
   -webkit-box-shadow: 0px 0px 0px 5px #32b72f inset;
           box-shadow: 0px 0px 0px 5px #32b72f inset;
+}
+
+.hidden {
+  display: none;
+}
+
+.pop-up {
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.89);
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.de-select {
+  height: 150px;
+  width: auto;
+  margin: 0 20px;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  color: white;
+  background-color: #ff83bd;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
 }

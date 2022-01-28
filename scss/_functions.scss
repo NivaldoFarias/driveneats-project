@@ -7,6 +7,3 @@
 @function color($color-name){
   @return map-get($colors, $color-name)
 };
-@function text-height($height-name){
-  @return map-get($line-heights, $height-name)
-}

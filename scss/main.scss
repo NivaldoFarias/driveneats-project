@@ -121,16 +121,9 @@ footer {
 .articles-container {
   @include articlesContainer();
 }
-.selected-food {
+.selected {
   box-shadow: 0px 0px 0px 5px rgba(50, 183, 47, 1) inset;
 }
-.selected-drink {
-  box-shadow: 0px 0px 0px 5px rgba(50, 183, 47, 1) inset;
-}
-.selected-dessert {
-  box-shadow: 0px 0px 0px 5px rgba(50, 183, 47, 1) inset;
-}
-
 .hidden {
   display: none;
 }

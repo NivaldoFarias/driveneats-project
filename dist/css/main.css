@@ -166,17 +166,7 @@ footer button {
   height: 100%;
 }
 
-.selected-food {
-  -webkit-box-shadow: 0px 0px 0px 5px #32b72f inset;
-          box-shadow: 0px 0px 0px 5px #32b72f inset;
-}
-
-.selected-drink {
-  -webkit-box-shadow: 0px 0px 0px 5px #32b72f inset;
-          box-shadow: 0px 0px 0px 5px #32b72f inset;
-}
-
-.selected-dessert {
+.selected {
   -webkit-box-shadow: 0px 0px 0px 5px #32b72f inset;
           box-shadow: 0px 0px 0px 5px #32b72f inset;
 }

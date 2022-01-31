@@ -1,4 +1,7 @@
 window.onload = toggleButton();
+let selectedFood = null;
+let selectedDrink = null;
+let selectedDessert = null;
 
 function selectFood(id) {
   const collection = document.getElementsByClassName("selected-food");
@@ -8,14 +11,17 @@ function selectFood(id) {
   {
     element.classList.toggle("selected-food");
     allowPurchase(0);
+    selectedFood = element;
   }
   else if (collection.length != 0 && collection[0] != element)
   {
     collection[0].classList.toggle("selected-food");
     element.classList.toggle("selected-food");
+    selectedFood = element;
   } 
   else if (collection.length != 0 && collection[0] == element){
-    deSelectFood(element);
+    selectedFood = 0;
+    deSelectItem();
     allowPurchase(1);
   }
 }
@@ -26,15 +32,18 @@ function selectDrink(id) {
   if (collection.length == 0)
   {
     element.classList.toggle("selected-drink");
+    selectedDrink = element;
     allowPurchase(0);
   }
   else if (collection.length != 0 && collection[0] != element)
   {
     collection[0].classList.toggle("selected-drink");
     element.classList.toggle("selected-drink");
+    selectedDrink = element;
   } 
   else if (collection.length != 0 && collection[0] == element){
-    deSelectDrink(element);
+    selectedDrink = 0;
+    deSelectItem();
     allowPurchase(1);
   }
 }
@@ -45,16 +54,19 @@ function selectDessert(id) {
   if (collection.length == 0)
   {
     element.classList.toggle("selected-dessert");
+    selectedDessert = element;
     allowPurchase(0); // 0 = first element since load to be selected
   }
   else if (collection.length != 0 && collection[0] != element)
   {
     collection[0].classList.toggle("selected-dessert");
     element.classList.toggle("selected-dessert");
+    selectedDessert = element;
   } 
   else if (collection.length != 0 && collection[0] == element)
   {
-    deSelectDessert(element);
+    selectedDessert = 0;
+    deSelectItem();
     allowPurchase(1); // 1 = element de-selected, clear section 
   }
 }
@@ -81,14 +93,12 @@ function allowPurchase(i) {
     if (selectedItems == 2){
       toggleButton();
       element.innerHTML = `Selecione ${3 - selectedItems} item para fechar o pedido`;
-      console.log("passou 1");
     }
     else if (selectedItems == 1){
       element.innerHTML = `Selecione ${3 - selectedItems} itens para fechar o pedido`;
     }
     else if (selectedItems == 0){
       element.innerHTML = `Selecione ${3 - selectedItems} itens para fechar o pedido`;
-      console.log("passou 2");
     }
   }
 
@@ -113,39 +123,39 @@ function allowPurchase(i) {
     }
   }*/
 }
-function popUpDeSelectDessert(element) {
+function popUpToggle(element) {
   const scrollDisable1 = document.querySelector("body");
   scrollDisable1.classList.toggle("disable-scroll");
 
   const scrollDisable2 = document.querySelector(".options-container");
   scrollDisable2.classList.toggle("disable-scroll");
 
-  const indexDeSelect = document.querySelector("de-select");
+  const indexDeSelect = document.querySelector(".de-select");
   indexDeSelect.classList.toggle("hidden");
-
-  
+  if (!(indexDeSelect.classList.contains("hidden"))) {
+    indexDeSelect.textContent = `Deseja remover ${element.children[1].innerHTML} dos selecionados?`;
+  }
 }
-function deSelectFood(element) {
-  element.classList.remove("selected-food");
-  
-}
-function deSelectDrink(element) {
-  element.classList.remove("selected-drink");
-}
-function deSelectDessert(element) {
-  element.classList.remove("selected-dessert");
-  allowPurchase();
-}
+function deSelectItem() {
+  if (selectedFood == 0) {
+    let food = document.getElementsByClassName("selected-food");
+    food.classList.toggle("selected-food");
+  }
+  else if (selectedDrink == 0) {
+    let drink = document.getElementsByClassName("selected-drink");
+    drink.classList.toggle("selected-drink");
+  }else if (selectedDessert == 0) {
+    let dessert = document.getElementsByClassName("selected-dessert");
+    dessert.classList.toggle("selected-dessert");
+  } 
+} 
 function toggleButton() {
   const btn = document.getElementById("btn");
-  console.log(btn.disabled + "0");
   if (btn.disabled) {
     btn.disabled = false;
-    console.log(btn.disabled + "1");
   }
   else if (!btn.disabled){
     btn.disabled = true;
-    console.log(btn.disabled + "2");
   }
 }
 /*function popUpPurchase() {

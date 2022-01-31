@@ -130,7 +130,6 @@ footer {
 .selected-dessert {
   box-shadow: 0px 0px 0px 5px rgba(50, 183, 47, 1) inset;
 }
-
 .hidden {
   display: none;
 }
@@ -145,14 +144,19 @@ footer {
   overflow: hidden;
 }
 .de-select {
-  height: 150px;
-  width: auto;
+  position: fixed;
+  z-index: 7;
+  top: 50%;
+
+  height: 200px;
+  width: calc(100vw - 20px);
   margin: 0 20px;
   padding: 20px;
 
   font-family: 'Roboto', sans-serif;
   font-size: size("main-title");
   color: white;
+  text-align: center;
 
   background-color: color("pink-light");
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);

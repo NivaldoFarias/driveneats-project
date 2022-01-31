@@ -142,7 +142,7 @@ function sendPurchase() {
 
   let totalPrice = (foodPrice + drinkPrice + dessertPrice).toFixed(2);
 
-  let message = `Olá, gostaria de fazer o pedido: \n- *Prato:* _${selectedFood.children[1].innerText}_\n- *Bebida:* _${selectedDrink.children[1].innerText}_\n- *Sobremesa:* _${selectedDessert.children[1].innerText}_\n*Total:* _R$ ${totalPrice}_`;
+  let message = `Olá, gostaria de fazer o pedido: \n- *Prato:* _${selectedFood.children[1].innerText}_\n- *Bebida:* _${selectedDrink.children[1].innerText}_\n- *Sobremesa:* _${selectedDessert.children[1].innerText}_\n*Total:* R$ ${totalPrice}`;
   let encodedMessage = encodeURIComponent(message);
 
   window.location.replace(`https://wa.me/${phoneNumber}?text=${encodedMessage}`);

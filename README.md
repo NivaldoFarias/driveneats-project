@@ -30,9 +30,11 @@
   <p align="center">
     Web Development Project using HTML, SCSS and JS
     <br />
-    <a href="https://github.com/NivaldoFarias/projeto2-driveneats/blob/main/dist/index.html"><strong>View HTML Code»</strong></a>
-    or
-    <a href="https://github.com/NivaldoFarias/projeto2-driveneats/blob/main/scss/main.scss"><strong>View SCSS Code»</strong></a>
+    <a href="https://github.com/NivaldoFarias/projeto2-driveneats/blob/main/dist/index.html"><strong>HTML code»</strong></a>
+    -
+    <a href="https://github.com/NivaldoFarias/projeto2-driveneats/blob/main/scss/main.scss"><strong>SCSS code»</strong></a>
+    -
+    <a href="https://github.com/NivaldoFarias/projeto3-driveneats/blob/main/JS/script.js"><strong>JS code»</strong></a>
 </div>
 
 <!-- ABOUT THE PROJECT -->
